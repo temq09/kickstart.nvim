@@ -1,4 +1,2 @@
-return {
-  'sindrets/diffview.nvim',
-  cmd = { 'DiffviewOpen', 'DiffviewClose', 'DiffviewToggleFiles', 'DiffviewFocusFiles' },
-}
+vim.pack.add { 'https://github.com/sindrets/diffview.nvim' }
+require('diffview').setup()
