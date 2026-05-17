@@ -1,16 +1,11 @@
-return {
-  'nvim-neotest/neotest',
-  dependencies = {
-    'nvim-neotest/nvim-nio',
-    'nvim-lua/plenary.nvim',
-    'antoinemadec/FixCursorHold.nvim',
-    'nvim-treesitter/nvim-treesitter',
+vim.pack.add {
+  'https://github.com/nvim-neotest/nvim-nio',
+  'https://github.com/mrcjkb/rustaceanvim',
+  'https://github.com/nvim-neotest/neotest',
+}
+
+require('neotest').setup {
+  adapters = {
+    require 'rustaceanvim.neotest' ,
   },
-  config = function()
-    require('neotest').setup {
-      adapters = {
-        require 'rustaceanvim.neotest',
-      },
-    }
-  end,
 }

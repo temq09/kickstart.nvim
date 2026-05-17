@@ -1,1 +1,2 @@
-return { 'akinsho/bufferline.nvim', version = '*', dependencies = 'nvim-tree/nvim-web-devicons' }
+vim.pack.add {'https://github.com/akinsho/bufferline.nvim'}
+require('bufferline').setup()
